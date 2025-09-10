@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aronixxx</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background: #f0f0f0; }
+  h1 { color: #333; }
+  label { display: block; margin-top: 10px; }
+  input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+  button { margin-top: 15px; padding: 10px 15px; background: #007bff; color: white; border: none; cursor: pointer; }
+  button:hover { background: #0056b3; }
+  footer { margin-top: 30px; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Aronixxx</h1>
+
+<form id="form">
+  <label>¿En qué te podemos ayudar? Justifica tus respuestas:</label>
+  <textarea name="ayuda" rows="4" required></textarea>
+
+  <label>Nombre:</label>
+  <input type="text" name="nombre" required />
+
+  <label>Apellidos:</label>
+  <input type="text" name="apellidos" required />
+
+  <label>Género:</label>
+  <select name="genero" required>
+    <option value="">Selecciona</option>
+    <option value="Masculino">Masculino</option>
+    <option value="Femenino">Femenino</option>
+    <option value="Otro">Otro</option>
+  </select>
+
+  <label>Situación o dedicación:</label>
+  <input type="text" name="situacion" required />
+
+  <label>Correo:</label>
+  <input type="email" name="correo" required />
+
+  <label>Número:</label>
+  <input type="tel" name="numero" required />
+
+  <label>Apodo:</label>
+  <input type="text" name="apodo" required />
+
+  <label>Subir imagen:</label>
+  <input type="file" name="imagen" accept="image/*" />
+
+  <button type="submit">Enviar</button>
+</form>
+
+<footer>Oye, eres bien loca jaja 😅</footer>
+
+<script>
+  const form = document.getElementById('form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('¡Gracias por registrarte! Pero el envío por email no está configurado en esta demo.');
+    form.reset();
+  });
+</script>
+</body>
+</html>
